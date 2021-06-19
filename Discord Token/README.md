@@ -6,6 +6,7 @@ Repo for the Blockchain Dev 101 Discord groups ERC20 Token.
 
 This token will act as a tracker for a members involvement in the community.
 This includes:
+
     - Being given as a prize for future Community Project Competitions/Hackathons.
     - Having the ability for server members to 'tip' other members.
     - Participating in airdrops. 
