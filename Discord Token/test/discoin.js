@@ -1,21 +1,25 @@
 const Discoin = artifacts.require('Discoin');
+const Web3 = require('web3');
+const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
 
 contract('Discoin', async () => {
     let discoin = null;
+
+
     before(async () => {
         discoin = await Discoin.deployed();
-
+        accounts = await web3.eth.getAccounts();
     });
 
     it('Should mint 1000 coins', async () => {
-        await discoin.mint("0xddf9A1666ABb8892173F7f00782925ef72c9a2B0", 1000);
+        await discoin.mint(accounts[0], 1000);
         const totalsupply = await discoin.totalSupply();
         assert(totalsupply.toNumber() === 1000);
     });
 
     it('Should transfer 200 coins to address[1]', async () => {
-        await discoin.transfer('0x5fBE3d36A63bcfb87C49D48834353e8B94f96999', 200);
-        const balance = await discoin.balanceOf('0x5fBE3d36A63bcfb87C49D48834353e8B94f96999');
+        await discoin.transfer(accounts[1], 200);
+        const balance = await discoin.balanceOf(accounts[1]);
         assert(balance.toNumber() === 200);
     });
 

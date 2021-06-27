@@ -14,4 +14,7 @@ contract Discoin is ERC20, Ownable {
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
+    // Require user hasn't taken already received an initial mint
+    /* If (block.timestamp <= end of airdrop period) { 
+        } else {] */
 }
