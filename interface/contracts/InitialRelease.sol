@@ -40,6 +40,10 @@ contract InitialRelease is Ownable {
     function joinDrop(string memory _username) public {
         //check this address hasn't already joined the drop
         require(!releaseParticipants[msg.sender], "Address already opted in.");
+        require(
+            bytes(_username).length <= 16,
+            "String must be less than 16 bytes"
+        );
 
         //set the address to true (can't join drop again)
         releaseParticipants[msg.sender] = true;

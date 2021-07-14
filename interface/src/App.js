@@ -5,8 +5,8 @@ import './custom.scss';
 import { ethers } from 'ethers';
 import InitialRelease from './artifacts/contracts/InitialRelease.sol/InitialRelease.json';
 
-const initialReleaseAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
-const bilditAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
+const initialReleaseAddress = "0x6fB12422F930cE10D0682Ca3B79e5140D7E961D8";
+const bilditAddress = "0x2414F22e3a423DD63d085dD0d667334F060d733d"
 const tokenName = "Bildit";
 
 function App() {
@@ -37,7 +37,6 @@ function App() {
       <div className="container align-items-start" id="Main">
         <div className="border rounded-top border-light pt-2" id="Info">
           <h2>{tokenName} blockchain-dev-101</h2>
-          <button className='btn btn-dark'>Clicky</button>
           <p className="px-2">{tokenName} is a community focused on educating future blockchain developers and giving them opportunities to network with other developers and work on ideas.</p>
           <p className="px-2">{tokenName} community members are building an ecosystem to help onboard new devs and give people interesting projects to work on to strengthen their portfolios.</p>
           <br />
@@ -46,11 +45,11 @@ function App() {
           <p className="px-2">This token will be used as a de facto scoreboard for a users contribution to the Blockchain Dev 101 discord group and its on-chain ecosystem. </p>
         </div>
         <div className="border rounded-bottom border-light pb-2" id="Airdrop">
-          <p className="pt-2">Redeem 200BILD tokens before the end of August.</p>
-          <button type="button" className="btn btn-lg btn-primary mb-2" onClick={joinDrop}>Join Airdrop</button>
-          <div className="input-group my-4">
-            <button className="btn btn-primary" type="button" id="button-addon1" onClick={joinDrop}>Set username</button>
-            <input onChange={e => setUsernameValue(e.target.value)} value={username} type="text" className="form-control" placeholder="Username" aria-label="input field with button addon" aria-describedby="button-addon1" />
+          <span className="getDrop p-4 ">Link your Ropsten address to your Discord username and receive 200BILD.</span><br />
+          <span className="getDrop p-4 text-primary ">Username should be less than 16 bytes.</span>
+          <div className="container input-group my-4">
+            <button className="btn btn-primary ml-2" type="button" id="button-addon1" onClick={joinDrop}>Set username</button>
+            <input onChange={e => setUsernameValue(e.target.value)} value={username} type="text" className="form-control mr-1" placeholder="Username" aria-label="input field with button addon" aria-describedby="button-addon1" />
           </div>
         </div>
 
