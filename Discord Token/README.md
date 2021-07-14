@@ -8,7 +8,6 @@ This token will act as a tracker for a members involvement in the community.
 This includes:
 
     - Being given as a prize for future Community Project Competitions/Hackathons.
-    - Having the ability for server members to 'tip' other members.
     - Participating in airdrops. 
 
 ## Spec
@@ -19,5 +18,7 @@ The token has 0 decimals. As this token doesn't plan to operate as a currency fr
 ## To do
 
 The token name and symbol are currently still placeholders. 
-Formal Truffle tests are yet to be done on the contract.
+Further Truffle Tests required to confirm everything works as expected:
+   Test joinDrop function (balance goes to users, leaves contract account).
+  
 
