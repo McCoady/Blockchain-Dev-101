@@ -1,0 +1,33 @@
+.App {
+  min-height: 100vh;
+  background-color: #003049;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#Airdrop {
+  background-color: #FCBF49;
+}
+
+#Info {
+  background-color: #D62828;
+}
+
+#Main {
+  text-align: center;
+}
+
+#Brand {
+  text-align: start; 
+}
+
+#navbarNav {
+  text-align: center;
+}

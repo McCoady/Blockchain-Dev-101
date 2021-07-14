@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity 0.8.4;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Discoin is ERC20, Ownable {
-    constructor() ERC20("Discoin", "DSC") {}
+contract BildIt is ERC20, Ownable {
+    constructor() ERC20("BildIt", "BILD") {}
 
     function decimals() public pure override returns (uint8) {
         return 0;
@@ -14,3 +14,4 @@ contract Discoin is ERC20, Ownable {
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
+}
