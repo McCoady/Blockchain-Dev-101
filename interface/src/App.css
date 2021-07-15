@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
 .App {
   min-height: 100vh;
   background-color: #003049;
@@ -5,19 +7,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.form-control:valid {
+  background-color:  #EAE2B7!important;
+}
+
+h2 {
+  color: #EAE2B7; 
+}
 #Airdrop {
-  background-color: #FCBF49;
+  background-color: #003049;
 }
 
 #Info {
-  background-color: #D62828;
+  background-color: #003049;
 }
 
 #Main {
@@ -26,8 +37,4 @@
 
 #Brand {
   text-align: start; 
-}
-
-#navbarNav {
-  text-align: center;
 }
