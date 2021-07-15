@@ -23,10 +23,14 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner()
       const contract = new ethers.Contract(initialReleaseAddress, InitialRelease.abi, signer)
-      const optIn = await contract.joinDrop(username);
-      setUsernameValue('')
-      await optIn.wait();
-      console.log(`200BILD successfully sent`)
+      try {
+        const optIn = await contract.joinDrop(username);
+        setUsernameValue('')
+        await optIn.wait();
+        console.log(`200BILD successfully sent`)
+      } catch (error) {
+        console.error('Transaction Failed. Address already opted in?')
+      }
     }
   }
 
