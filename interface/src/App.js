@@ -45,7 +45,7 @@ function App() {
           <p className="px-2">{tokenName} community members are building an ecosystem to help onboard new devs and give people interesting projects to work on to strengthen their portfolios.</p>
           <br />
           <h2>{tokenName.toUpperCase()} TOKEN</h2>
-          <p className="px-2">The Blockchain Dev 101 {tokenName} ERC20 token ($BILD) will be released on the Ropsten Ethereum test network.</p>
+          <p className="px-2">The Blockchain Dev 101 {tokenName} ERC20 token ($BILD) is deployed on the Ropsten Ethereum test network.</p>
           <p className="px-2">This token will be used as a de facto scoreboard for a users contribution to the Blockchain Dev 101 discord group and its on-chain ecosystem. </p>
         </div>
         <div className="border rounded-bottom border-light pb-2" id="Airdrop">
