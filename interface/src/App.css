@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 .App {
-  min-height: 100vh;
+  min-height: 95vh;
   background-color: #003049;
   display: flex;
   flex-direction: column;

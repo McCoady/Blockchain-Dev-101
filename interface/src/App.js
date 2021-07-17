@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import Navbar from './Navbar';
+import Connect from './Connect';
 import './custom.scss';
 import { ethers } from 'ethers';
 import InitialRelease from './artifacts/contracts/InitialRelease.sol/InitialRelease.json';
@@ -36,28 +37,32 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Navbar />
-      <div className="container align-items-start" id="Main">
-        <div className="pt-2" id="Info">
-          <h2>{tokenName} blockchain-dev-101</h2>
-          <p className="px-2">{tokenName} is a community focused on educating future blockchain developers and giving them opportunities to network with other developers and work on ideas.</p>
-          <p className="px-2">{tokenName} community members are building an ecosystem to help onboard new devs and give people interesting projects to work on to strengthen their portfolios.</p>
-          <br />
-          <h2>{tokenName} token</h2>
-          <p className="px-2">The Blockchain Dev 101 {tokenName} ERC20 token ($BILD) is deployed on the Ropsten Ethereum test network.</p>
-          <p className="px-2">This token will be used as a de facto scoreboard for a users contribution to the Blockchain Dev 101 discord group and its on-chain ecosystem. </p>
-        </div>
-        <br />
-        <div className="pb-2 text-secondary" id="Airdrop">
-          <span className="getDrop p-4">Link your Ropsten address to your Discord username and receive 200BILD.</span><br />
-          <span className="getDrop p-4">Username should be less than 16 bytes.</span>
-          <div className="container input-group my-4">
-            <button className="btn btn-primary ml-2 text-light" type="button" id="button-addon1" onClick={joinDrop}>Set username</button>
-            <input onChange={e => setUsernameValue(e.target.value)} value={username} type="text" className="form-control mr-1" placeholder="Username" aria-label="input field with button addon" aria-describedby="button-addon1" />
-          </div>
-        </div>
+    <div className="Overall">
+      <Connect />
+      <div className="App">
 
+        <Navbar />
+        <div className="container align-items-start" id="Main">
+          <div className="pt-2" id="Info">
+            <h2>{tokenName} blockchain-dev-101</h2>
+            <p className="px-2">{tokenName} is a community focused on educating future blockchain developers and giving them opportunities to network with other developers and work on ideas.</p>
+            <p className="px-2">{tokenName} community members are building an ecosystem to help onboard new devs and give people interesting projects to work on to strengthen their portfolios.</p>
+            <br />
+            <h2>{tokenName} token</h2>
+            <p className="px-2">The Blockchain Dev 101 {tokenName} ERC20 token ($BILD) is deployed on the Ropsten Ethereum test network.</p>
+            <p className="px-2">This token will be used as a de facto scoreboard for a users contribution to the Blockchain Dev 101 discord group and its on-chain ecosystem. </p>
+          </div>
+          <br />
+          <div className="pb-2 text-secondary" id="Airdrop">
+            <span className="getDrop p-4">Link your Ropsten address to your Discord username and receive 200BILD.</span><br />
+            <span className="getDrop p-4">Username should be less than 16 bytes.</span>
+            <div className="container input-group my-4">
+              <button className="btn btn-primary ml-2 text-light" type="button" id="button-addon1" onClick={joinDrop}>Set username</button>
+              <input onChange={e => setUsernameValue(e.target.value)} value={username} type="text" className="form-control mr-1" placeholder="Username" aria-label="input field with button addon" aria-describedby="button-addon1" />
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );
