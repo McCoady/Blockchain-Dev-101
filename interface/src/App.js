@@ -17,13 +17,13 @@ function App() {
           <Navbar />
           <div className="content">
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/Blockchain-Dev-101/">
                 <Home />
               </Route>
-              <Route path="/leaderboard">
+              <Route path="/Blockchain-Dev-101/leaderboard">
                 <Leaderboard />
               </Route>
-              <Route path="/roadmap">
+              <Route path="/Blockchain-Dev-101/roadmap">
                 <Roadmap />
               </Route>
             </Switch>
